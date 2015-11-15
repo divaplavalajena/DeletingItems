@@ -29,6 +29,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell;
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(editingStyle == UITableViewCellEditingStyle.Delete) {
+            
+            let item = students[indexPath.row]
+            students.removeAtIndex(indexPath.row)
+            context.deleteObject(item)
+            
+            try! context.save()
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
