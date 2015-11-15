@@ -13,6 +13,10 @@
 		0C961D951B15FEF700896026 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C961D941B15FEF700896026 /* Images.xcassets */; };
 		0C961D981B15FEF700896026 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C961D961B15FEF700896026 /* LaunchScreen.xib */; };
 		0C961DA41B15FEF700896026 /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C961DA31B15FEF700896026 /* CoreDataStackTests.swift */; };
+		0C961DAE1B15FF1400896026 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C961DAD1B15FF1400896026 /* CoreDataStack.swift */; };
+		0CA299591B8335FD00B5FACC /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CA299571B8335FD00B5FACC /* Data.xcdatamodeld */; };
+		0CA2995C1B83365100B5FACC /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2995A1B83365100B5FACC /* Student+CoreDataProperties.swift */; };
+		0CA2995D1B83365100B5FACC /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2995B1B83365100B5FACC /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		0C961D9D1B15FEF700896026 /* CoreDataStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C961DA21B15FEF700896026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C961DA31B15FEF700896026 /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
+		0C961DAD1B15FF1400896026 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		0CA299581B8335FD00B5FACC /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		0CA2995A1B83365100B5FACC /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataProperties.swift"; path = "../Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0CA2995B1B83365100B5FACC /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = ../Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 			children = (
 				0C961D8D1B15FEF700896026 /* AppDelegate.swift */,
 				0C961D8F1B15FEF700896026 /* ViewController.swift */,
+				0C961DAD1B15FF1400896026 /* CoreDataStack.swift */,
+				0CA2995A1B83365100B5FACC /* Student+CoreDataProperties.swift */,
+				0CA2995B1B83365100B5FACC /* Student.swift */,
+				0CA299571B8335FD00B5FACC /* Data.xcdatamodeld */,
 				0C961D911B15FEF700896026 /* Main.storyboard */,
 				0C961D941B15FEF700896026 /* Images.xcassets */,
 				0C961D961B15FEF700896026 /* LaunchScreen.xib */,
@@ -156,6 +168,8 @@
 		0C961D801B15FEF700896026 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Fahir Mehovic";
 				TargetAttributes = {
@@ -212,8 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C961DAE1B15FF1400896026 /* CoreDataStack.swift in Sources */,
+				0CA2995D1B83365100B5FACC /* Student.swift in Sources */,
 				0C961D901B15FEF700896026 /* ViewController.swift in Sources */,
 				0C961D8E1B15FEF700896026 /* AppDelegate.swift in Sources */,
+				0CA299591B8335FD00B5FACC /* Data.xcdatamodeld in Sources */,
+				0CA2995C1B83365100B5FACC /* Student+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +429,7 @@
 				0C961DA91B15FEF700896026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C961DAA1B15FEF700896026 /* Build configuration list for PBXNativeTarget "CoreDataStackTests" */ = {
 			isa = XCConfigurationList;
@@ -419,8 +438,22 @@
 				0C961DAC1B15FEF700896026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0CA299571B8335FD00B5FACC /* Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0CA299581B8335FD00B5FACC /* Data.xcdatamodel */,
+			);
+			currentVersion = 0CA299581B8335FD00B5FACC /* Data.xcdatamodel */;
+			path = Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0C961D801B15FEF700896026 /* Project object */;
 }
